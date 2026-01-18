@@ -19,6 +19,6 @@ public class SampleTest {
         BrowserContext browserContext = browser.newContext(new NewContextOptions().setScreenSize(1920, 1080));
         Page page = browserContext.newPage();
         page.navigate(System.getenv("BASE_URL"));
-        Assert.assertEquals(page.title(), "Create Next App");
+        Assert.assertEquals(page.title(), "Create Next App with react");
     }
 }
