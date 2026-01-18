@@ -18,7 +18,7 @@ public class SampleTest {
         Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(true));
         BrowserContext browserContext = browser.newContext(new NewContextOptions().setScreenSize(1920, 1080));
         Page page = browserContext.newPage();
-        page.navigate("http://localhost:3000");
+        page.navigate(System.getenv("BASE_URL"));
         Assert.assertEquals(page.title(), "Create Next App");
     }
 }
